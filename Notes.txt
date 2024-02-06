@@ -1,0 +1,47 @@
+VCS:
+- Version Control System is a software tool that helps manage changes to source code, documents, and other files.
+
+Types of Version Control:
+- Centralized Version Control System (CVCS)
+- Distributed Version Control System (DVCS)
+
+Git:
+- Git is DVCS tool to track changes.
+
+Git Features:
+- Branching
+- Committing
+- Merging
+
+Repository:
+- A storage space for project history and files, Example- GitHub, Gitlab, BitBucket.
+
+Important git commands:
+- add --> For stage changes in working directory
+- commit --> For committing changes (adding commit message)
+- push --> For pushing committed changes from local machine to server
+- pull --> For pulling committed changes from server to local machine
+- merge --> For merging branch.
+
+Working Directory:
+- Things which are in local machine. (Not Committed)
+
+Staging:
+- Things which are in local machine. (Committed but NOT pushed).
+
+Remote:
+- Things which are in remote area. (All pushed changes)
+
+Forking:
+- Creates a personal copy of someone else's project on GitHub.
+
+Trunk Based Development:
+- Developers works on single branch (main branch).
+- Faster development.
+- Low chances of conflicts.
+- Suitable for small projects and small team.
+
+Branch Based Development:
+- Developers create their own feature branches.
+- Suitable for big projects and big teams.
+- More chances of merge conflicts.
