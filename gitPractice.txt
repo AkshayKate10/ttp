@@ -14,3 +14,9 @@ Continents
 - Africa
 - Australia
 - Antarctica
+
+Asian Countries
+
+- India
+- Pakistan
+- UAE
