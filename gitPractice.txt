@@ -5,6 +5,16 @@ Ocean List
 - Arctic
 - Atlantic
 
+Continents
+
+- Asia
+- Europe
+- North America
+- South America
+- Africa
+- Australia
+- Antarctica
+
 Asian Countries
 
 - India
