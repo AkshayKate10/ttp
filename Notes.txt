@@ -17,3 +17,9 @@ Build Tool Examples:
 - Ant
 - npm 
 - yarn
+
+Features:
+- Build the complete project. (create .class files)
+- Code Coverage
+- Gated checkins- set standard checks ex - code Coverage should more than 95%
+- Nightly builds - build project on all commits pushed on that day.
