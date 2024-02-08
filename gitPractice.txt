@@ -25,3 +25,8 @@ Europian Countries
 - UK
 - France
 - Poland
+
+North America Countries
+- USA
+- Canada
+- Mexico
