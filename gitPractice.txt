@@ -30,3 +30,8 @@ North America Countries
 - USA
 - Canada
 - Mexico
+
+South American Countries
+- Brazil
+- Peru
+- Chile
