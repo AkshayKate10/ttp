@@ -35,3 +35,8 @@ South American Countries
 - Brazil
 - Peru
 - Chile
+
+African Countries
+- Egypt
+- Mali
+- Sudan
