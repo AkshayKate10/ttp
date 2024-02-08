@@ -11,3 +11,6 @@ Continents
 - Europe
 - North America
 - South America
+- Africa
+- Australia
+- Antarctica
