@@ -1,0 +1,19 @@
+Build tool:
+- Build tool is software which build the project, run unit test cases and create executable file.
+
+Problems resolved by Build Tools:
+- It reduces complexity in compilation as we may have large number of files.
+- It reduces inconsistancy
+- It reduces repetative tasks
+
+Advantages of Build tools:
+- Automates work and make developer productive.
+- Manage dependencies.
+- Execute in correct order. Build -> Test Cases
+
+Build Tool Examples:
+- Maven
+- Gradle
+- Ant
+- npm 
+- yarn
