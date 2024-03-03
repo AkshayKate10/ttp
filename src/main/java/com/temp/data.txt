@@ -1,4 +1,0 @@
-sachin,tendulkar,14/02
-virat,kohli,15/02
-mahendra,dhoni,16/02
-rahul,dravid,16/02
