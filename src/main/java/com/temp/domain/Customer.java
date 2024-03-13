@@ -3,25 +3,20 @@ package com.temp.domain;
 import com.temp.domain.exception.InvalidCustomerEmailException;
 import com.temp.domain.exception.InvalidCustomerIdException;
 import com.temp.domain.exception.InvalidCustomerNameException;
+import com.temp.domain.validator.Validators;
 
 import java.util.Objects;
-import java.util.regex.Pattern;
 
 public class Customer {
     private int customerId;
     private String customerName;
     private String customerEmailId;
-    final String onlyCharactersRegex = "[0-9$@#%&^*()!]";
-    final String emailRegex = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";
-    ;
-    Pattern onlyCharactersPattern = Pattern.compile(onlyCharactersRegex);
-    Pattern emailPattern = Pattern.compile(emailRegex);
+
 
     public Customer(int customerId, String customerName, String customerEmailId) throws Exception {
-        if (customerId <= 0) throw new InvalidCustomerIdException();
-        if (customerName.isEmpty() || onlyCharactersPattern.matcher(customerName).find())
-            throw new InvalidCustomerNameException();
-        if (!emailPattern.matcher(customerEmailId).find()) throw new InvalidCustomerEmailException();
+        if (Validators.validateCustomerId(customerId)) throw new InvalidCustomerIdException();
+        if (Validators.validateCustomerName(customerName)) throw new InvalidCustomerNameException();
+        if (Validators.validateCustomerEmail(customerEmailId)) throw new InvalidCustomerEmailException();
 
         this.customerId = customerId;
         this.customerName = customerName;
