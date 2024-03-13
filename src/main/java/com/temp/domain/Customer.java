@@ -15,7 +15,8 @@ public class Customer {
 
     public Customer(int customerId, String customerName, String customerEmailId) throws Exception {
         if (customerId <= 0) throw new InvalidCustomerIdException();
-        if (onlyCharacters.matcher(customerName).find()) throw new InvalidCustomerNameException();
+        if (customerName.isEmpty() || onlyCharacters.matcher(customerName).find())
+            throw new InvalidCustomerNameException();
 
         this.customerId = customerId;
         this.customerName = customerName;

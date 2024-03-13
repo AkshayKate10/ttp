@@ -18,6 +18,13 @@ class CustomerTest {
     }
 
     @Test
+    void shouldThrowExceptionOnEmptyCustomerName() {
+        assertThrows(Exception.class, () -> {
+            new Customer(1, "", "virtalkohli@gmail.com");
+        });
+    }
+
+    @Test
     void shouldThrowExceptionOnInvalidCustomerName() {
         assertThrows(Exception.class, () -> {
             new Customer(1, "Vir1 Koh55", "virtalkohli@gmail.com");
@@ -55,7 +62,8 @@ class CustomerTest {
         assertThrows(Exception.class, () -> {
             new Customer(1, "Vir( Koh", "virtalkohli@gmail.com");
         });
-
     }
+
+    
 
 }
