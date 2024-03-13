@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CreditCardManagerTest {
 
     @Test
-    void shouldAbleToCreateCustomer() {
+    void shouldAbleToCreateCustomer() throws Exception {
         int customerId = 1;
         String customerName = "Virat Kohli";
         String customerEmailId = "virtalkohli@gmail.com";

@@ -7,7 +7,8 @@ public class Customer {
     private String customerName;
     private String customerEmailId;
 
-    public Customer(int customerId, String customerName, String customerEmailId) {
+    public Customer(int customerId, String customerName, String customerEmailId) throws Exception {
+        if (customerId <= 0) throw new Exception();
         this.customerId = customerId;
         this.customerName = customerName;
         this.customerEmailId = customerEmailId;
