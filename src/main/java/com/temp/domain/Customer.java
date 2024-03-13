@@ -14,9 +14,9 @@ public class Customer {
 
 
     public Customer(int customerId, String customerName, String customerEmailId) throws Exception {
-        if (!Validators.validateCustomerId(customerId)) throw new InvalidCustomerIdException();
-        if (!Validators.validateCustomerName(customerName)) throw new InvalidCustomerNameException();
-        if (Validators.validateCustomerEmail(customerEmailId)) throw new InvalidCustomerEmailException();
+        if (!Validators.isValidCustomerId(customerId)) throw new InvalidCustomerIdException();
+        if (!Validators.isValidCustomerName(customerName)) throw new InvalidCustomerNameException();
+        if (!Validators.isValidCustomerEmail(customerEmailId)) throw new InvalidCustomerEmailException();
 
         this.customerId = customerId;
         this.customerName = customerName;

@@ -9,17 +9,18 @@ public class Validators {
     static Pattern onlyCharactersPattern = Pattern.compile(ONLY_CHARACTER_REGEX);
     static Pattern emailPattern = Pattern.compile(EMAIL_REGEX);
 
-    public static boolean validateCustomerId(int customerId) {
+    public static boolean isValidCustomerId(int customerId) {
         return customerId > 0;
     }
 
-    public static boolean validateCustomerName(String customerName) {
+    public static boolean isValidCustomerName(String customerName) {
         if (customerName == null) return false;
         boolean invalidCustomerName = customerName.isEmpty() || onlyCharactersPattern.matcher(customerName).find();
         return !invalidCustomerName;
     }
 
-    public static boolean validateCustomerEmail(String customerEmailId) {
-        return !emailPattern.matcher(customerEmailId).find();
+    public static boolean isValidCustomerEmail(String customerEmailId) {
+        if (customerEmailId == null) return false;
+        return emailPattern.matcher(customerEmailId).find();
     }
 }

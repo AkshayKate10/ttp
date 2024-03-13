@@ -9,31 +9,41 @@ class ValidatorsTest {
 
     @Test
     void validateCustomerId() {
-        assertTrue(Validators.validateCustomerId(1));
+        assertTrue(Validators.isValidCustomerId(1));
 
-        assertFalse(Validators.validateCustomerId(-1));
-        assertFalse(Validators.validateCustomerId(0));
+        assertFalse(Validators.isValidCustomerId(-1));
+        assertFalse(Validators.isValidCustomerId(0));
     }
 
     @Test
     void validateCustomerName() {
-        assertTrue(Validators.validateCustomerName("Virat Kohli"));
-        assertFalse(Validators.validateCustomerName("Virat1 Kohli"));
-        assertFalse(Validators.validateCustomerName("Virat! Kohli"));
-        assertFalse(Validators.validateCustomerName("Virat Kohli@"));
-        assertFalse(Validators.validateCustomerName("Virat #Kohli"));
-        assertFalse(Validators.validateCustomerName("Virat $Kohli"));
-        assertFalse(Validators.validateCustomerName("Virat Kohli%"));
-        assertFalse(Validators.validateCustomerName(")Virat Kohli"));
-        assertFalse(Validators.validateCustomerName("Virat( Kohli"));
-        assertFalse(Validators.validateCustomerName("Virat* Kohli"));
-        assertFalse(Validators.validateCustomerName("Virat^ Kohli"));
-        assertFalse(Validators.validateCustomerName(""));
-        assertFalse(Validators.validateCustomerName(null));
+        assertTrue(Validators.isValidCustomerName("Virat Kohli"));
 
+        assertFalse(Validators.isValidCustomerName("Virat1 Kohli"));
+        assertFalse(Validators.isValidCustomerName("Virat! Kohli"));
+        assertFalse(Validators.isValidCustomerName("Virat Kohli@"));
+        assertFalse(Validators.isValidCustomerName("Virat #Kohli"));
+        assertFalse(Validators.isValidCustomerName("Virat $Kohli"));
+        assertFalse(Validators.isValidCustomerName("Virat Kohli%"));
+        assertFalse(Validators.isValidCustomerName(")Virat Kohli"));
+        assertFalse(Validators.isValidCustomerName("Virat( Kohli"));
+        assertFalse(Validators.isValidCustomerName("Virat* Kohli"));
+        assertFalse(Validators.isValidCustomerName("Virat^ Kohli"));
+        assertFalse(Validators.isValidCustomerName(""));
+        assertFalse(Validators.isValidCustomerName(null));
     }
 
     @Test
     void validateCustomerEmail() {
+        assertTrue(Validators.isValidCustomerEmail("virtalkohli@gmail.com"));
+        assertTrue(Validators.isValidCustomerEmail("virtal.kohli@gmail.com"));
+
+        assertFalse(Validators.isValidCustomerEmail("virtalkohligmail.com"));
+        assertFalse(Validators.isValidCustomerEmail("@virtalkohligmail.com"));
+        assertFalse(Validators.isValidCustomerEmail(""));
+        assertFalse(Validators.isValidCustomerEmail(null));
+        assertFalse(Validators.isValidCustomerEmail("virtalkohli@gmail"));
+        assertFalse(Validators.isValidCustomerEmail("virtalkohli&gmail.com"));
+        assertFalse(Validators.isValidCustomerEmail("virtalkohli@&gmail.com"));
     }
 }
