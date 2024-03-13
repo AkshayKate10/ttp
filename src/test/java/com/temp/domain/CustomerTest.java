@@ -64,6 +64,14 @@ class CustomerTest {
         });
     }
 
-    
+    @Test
+    void shouldThrowExceptionOnWrongEmailFormat() {
+        assertThrows(Exception.class, () -> {
+            new Customer(1, "Virat Kohli", "virtalkohligmail.com");
+        });
+        assertThrows(Exception.class, () -> {
+            new Customer(1, "Virat Kohli", "");
+        });
+    }
 
 }
