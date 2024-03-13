@@ -1,6 +1,7 @@
 package com.temp;
 
 import com.temp.domain.Customer;
+import com.temp.domain.exception.InvalidException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

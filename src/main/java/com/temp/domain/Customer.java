@@ -8,6 +8,18 @@ import com.temp.domain.validator.Validators;
 import java.util.Objects;
 
 public class Customer {
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public String getCustomerEmailId() {
+        return customerEmailId;
+    }
+
     private int customerId;
     private String customerName;
     private String customerEmailId;
