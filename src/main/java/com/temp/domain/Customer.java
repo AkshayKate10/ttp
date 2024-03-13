@@ -8,26 +8,14 @@ import com.temp.domain.validator.Validators;
 import java.util.Objects;
 
 public class Customer {
-    public int getCustomerId() {
-        return customerId;
-    }
-
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public String getCustomerEmailId() {
-        return customerEmailId;
-    }
-
     private int customerId;
     private String customerName;
     private String customerEmailId;
 
 
     public Customer(int customerId, String customerName, String customerEmailId) throws Exception {
-        if (Validators.validateCustomerId(customerId)) throw new InvalidCustomerIdException();
-        if (Validators.validateCustomerName(customerName)) throw new InvalidCustomerNameException();
+        if (!Validators.validateCustomerId(customerId)) throw new InvalidCustomerIdException();
+        if (!Validators.validateCustomerName(customerName)) throw new InvalidCustomerNameException();
         if (Validators.validateCustomerEmail(customerEmailId)) throw new InvalidCustomerEmailException();
 
         this.customerId = customerId;

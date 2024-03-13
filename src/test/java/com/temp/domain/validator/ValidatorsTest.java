@@ -9,15 +9,28 @@ class ValidatorsTest {
 
     @Test
     void validateCustomerId() {
-        assertTrue(Validators.validateCustomerId(-1));
-        assertTrue(Validators.validateCustomerId(0));
+        assertTrue(Validators.validateCustomerId(1));
 
-        assertFalse(Validators.validateCustomerId(1));
-
+        assertFalse(Validators.validateCustomerId(-1));
+        assertFalse(Validators.validateCustomerId(0));
     }
 
     @Test
     void validateCustomerName() {
+        assertTrue(Validators.validateCustomerName("Virat Kohli"));
+        assertFalse(Validators.validateCustomerName("Virat1 Kohli"));
+        assertFalse(Validators.validateCustomerName("Virat! Kohli"));
+        assertFalse(Validators.validateCustomerName("Virat Kohli@"));
+        assertFalse(Validators.validateCustomerName("Virat #Kohli"));
+        assertFalse(Validators.validateCustomerName("Virat $Kohli"));
+        assertFalse(Validators.validateCustomerName("Virat Kohli%"));
+        assertFalse(Validators.validateCustomerName(")Virat Kohli"));
+        assertFalse(Validators.validateCustomerName("Virat( Kohli"));
+        assertFalse(Validators.validateCustomerName("Virat* Kohli"));
+        assertFalse(Validators.validateCustomerName("Virat^ Kohli"));
+        assertFalse(Validators.validateCustomerName(""));
+        assertFalse(Validators.validateCustomerName(null));
+
     }
 
     @Test
