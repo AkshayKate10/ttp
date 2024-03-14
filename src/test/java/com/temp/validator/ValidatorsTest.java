@@ -1,4 +1,4 @@
-package com.temp.domain.validator;
+package com.temp.validator;
 
 import com.temp.validator.Validators;
 import org.junit.jupiter.api.Test;

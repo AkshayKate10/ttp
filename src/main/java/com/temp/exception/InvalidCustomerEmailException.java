@@ -1,4 +1,4 @@
-package com.temp.domain.exception;
+package com.temp.exception;
 
 public class InvalidCustomerEmailException extends InvalidException {
 }

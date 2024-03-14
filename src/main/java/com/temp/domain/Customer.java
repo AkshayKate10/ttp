@@ -1,9 +1,9 @@
 package com.temp.domain;
 
-import com.temp.domain.exception.InvalidCustomerEmailException;
-import com.temp.domain.exception.InvalidCustomerIdException;
-import com.temp.domain.exception.InvalidCustomerNameException;
-import com.temp.domain.validator.Validators;
+import com.temp.exception.InvalidCustomerEmailException;
+import com.temp.exception.InvalidCustomerIdException;
+import com.temp.exception.InvalidCustomerNameException;
+import com.temp.validator.Validators;
 
 import java.util.Objects;
 
@@ -11,7 +11,7 @@ public class Customer {
     private int customerId;
     private String customerName;
     private String customerEmailId;
-
+    private int creditCardNumber;
 
     public Customer(int customerId, String customerName, String customerEmailId) throws Exception {
         if (!Validators.isValidCustomerId(customerId)) throw new InvalidCustomerIdException();
@@ -21,6 +21,14 @@ public class Customer {
         this.customerId = customerId;
         this.customerName = customerName;
         this.customerEmailId = customerEmailId;
+    }
+
+    public int getCreditCardNumber() {
+        return creditCardNumber;
+    }
+
+    public void setCreditCardNumber(int creditCardNumber) {
+        this.creditCardNumber = creditCardNumber;
     }
 
     @Override

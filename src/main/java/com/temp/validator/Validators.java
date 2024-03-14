@@ -1,4 +1,4 @@
-package com.temp.domain.validator;
+package com.temp.validator;
 
 import java.util.regex.Pattern;
 
