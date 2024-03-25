@@ -1,8 +1,10 @@
 package com.temp.domain;
 
-public class Scrabble {
-    public static int calculateScore(String inputString) {
+import com.temp.validator.Validate;
 
+public class Scrabble {
+    public static int calculateScore(String inputString) throws Exception {
+        if (!Validate.isValidInput(inputString)) throw new Exception();
         int score = 0;
         for (char c : inputString.toUpperCase().toCharArray()) {
             switch (c) {
