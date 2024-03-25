@@ -1,14 +1,13 @@
 package com.temp.domain;
 
 import com.temp.exception.InvalidCreditCardException;
+import com.temp.validator.Validators;
 
 public class CreditCard {
     private int creditCardNumber;
 
     public CreditCard(int creditCardNumber) throws Exception {
-        if (creditCardNumber == 0) throw new InvalidCreditCardException();
-        if (creditCardNumber > 9999 || creditCardNumber < 999)
-            throw new InvalidCreditCardException(); // Assuming Credit Card is 4-digit number
+        if (!Validators.isValidCreditCardNumber(creditCardNumber)) throw new InvalidCreditCardException();
         this.creditCardNumber = creditCardNumber;
     }
 

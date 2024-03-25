@@ -22,4 +22,8 @@ public class Validators {
         if (customerEmailId == null) return false;
         return emailPattern.matcher(customerEmailId).find();
     }
+
+    public static boolean isValidCreditCardNumber(int creditCardNumber) {
+        return creditCardNumber < 9999 && creditCardNumber > 999;
+    }
 }

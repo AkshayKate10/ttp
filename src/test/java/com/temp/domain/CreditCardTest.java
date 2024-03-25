@@ -13,7 +13,21 @@ class CreditCardTest {
         });
         // Assert
         assertThrows(Exception.class, () -> {
+            new CreditCard(11);
+        });
+        // Assert
+        assertThrows(Exception.class, () -> {
             new CreditCard(0);
         });
+        // Assert
+        assertThrows(Exception.class, () -> {
+            new CreditCard(-211);
+        });
+        // Assert
+        assertThrows(Exception.class, () -> {
+            new CreditCard(-3547);
+        });
+
+
     }
 }
