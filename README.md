@@ -1,6 +1,6 @@
-Problem
+## Problem Statement
 
-Unusual Spends
+### Unusual Spends
 
 You work at a credit card company and as a value-add they want to start providing alerts to users when their spending in any particular category is higher than usual.
 - Compare the total amount paid for the current month, grouped by category with the previous month
@@ -21,3 +21,10 @@ We have detected unusually high spending on your card in these categories:
 Thanks,
 
 The Credit Card Company
+
+---------
+
+### Classes - 
+- Customer
+- Credit Card
+- Exception
