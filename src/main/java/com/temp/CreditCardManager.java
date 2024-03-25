@@ -8,7 +8,7 @@ public class CreditCardManager {
         return new Customer(customerId, customerName, customerEmailId);
     }
 
-    public CreditCard creatCreditCard(int creditCardNumber) {
+    public CreditCard creatCreditCard(int creditCardNumber) throws Exception {
         return new CreditCard(creditCardNumber);
     }
 }

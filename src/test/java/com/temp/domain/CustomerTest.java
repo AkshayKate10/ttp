@@ -8,10 +8,11 @@ class CustomerTest {
 
     @Test
     void shouldThrowExceptionOnInvalidCustomerId() {
+        // Assert
         assertThrows(Exception.class, () -> {
             new Customer(-1, "Virat Kohli", "virtalkohli@gmail.com");
         });
-
+        // Assert
         assertThrows(Exception.class, () -> {
             new Customer(0, "Virat Kohli", "virtalkohli@gmail.com");
         });
@@ -19,6 +20,7 @@ class CustomerTest {
 
     @Test
     void shouldThrowExceptionOnEmptyCustomerName() {
+        // Assert
         assertThrows(Exception.class, () -> {
             new Customer(1, "", "virtalkohli@gmail.com");
         });
@@ -26,6 +28,7 @@ class CustomerTest {
 
     @Test
     void shouldThrowExceptionOnInvalidCustomerName() {
+        // Assert
         assertThrows(Exception.class, () -> {
             new Customer(1, "Vir1 Koh55", "virtalkohli@gmail.com");
         });
@@ -33,6 +36,7 @@ class CustomerTest {
 
     @Test
     void shouldThrowExceptionOnWrongEmailFormat() {
+        // Assert
         assertThrows(Exception.class, () -> {
             new Customer(1, "Virat Kohli", "virtalkohligmail.com");
         });
